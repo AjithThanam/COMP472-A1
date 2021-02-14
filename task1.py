@@ -1,11 +1,13 @@
 import matplotlib.pyplot as plt
 
 
-
+#main method
 def main():
     count_responses()
     
-
+#Method will count responses of each type found in the filtered file
+#The numerical value of the results are then displayed onto the console
+#Then the results are displayed onto a bar chart
 def count_responses():
     negative_response = 0
     positive_response = 0
