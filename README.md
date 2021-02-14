@@ -7,6 +7,7 @@
 
 ***Task 1***
 - Requires Task0 to be completed since we will be using some of the files generated from Task0.
+- Run "pip install matplotlib" in your console to install the library which plots the bar chart.
 - Open your command line and navigate to the directory which has the file containing all python code & associated files.
 - Run the python code "python task1.py" or "python3 task1.py".
 - A graph should be generated and in the console you should see the exact values of each class (neg & pos).
