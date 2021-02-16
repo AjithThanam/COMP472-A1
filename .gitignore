@@ -1,3 +1,5 @@
 dataset/all_sentiment_shuffled_filtered.txt
 dataset/evaluation_dataset.txt
 dataset/training_dataset.txt
+dataset/all_docs.txt
+dataset/all_labels.txt
