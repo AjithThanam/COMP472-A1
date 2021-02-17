@@ -18,13 +18,29 @@ def seperateLabelsAndDocs(filepath):
 
 def convertLabels(filepath):
     converted_labels = open("dataset/converted_labels.txt","w+")
+    line_count = 0
+    file_lines = 0
 
+    #Get number of lines the file contains
+    with open(filepath) as f:
+        file_lines = len(f.readlines())
+        print(file_lines)
+
+    #Will create a new file with '1' and '0' instead of 'pos' and 'neg'.
+    #The last line won't print a newline '\n'
     with open(filepath) as f:
         for line in f:
-            if "pos" in line:
-                converted_labels.write("1\n")
+            line_count += 1
+            if line_count == file_lines:
+                if "pos" in line:
+                    converted_labels.write("1")
+                else:
+                    converted_labels.write("0")
             else:
-                converted_labels.write("0\n")
+                if "pos" in line:
+                    converted_labels.write("1\n")
+                else:
+                    converted_labels.write("0\n")
 
 if __name__ == '__main__':
     main()
