@@ -4,3 +4,6 @@ dataset/training_dataset.txt
 dataset/all_docs.txt
 dataset/all_labels.txt
 dataset/converted_labels.txt
+dataset/task3_reports/naive_bayes.txt
+dataset/task3_reports/base_dt.txt
+dataset/task3_reports/best_dt.txt
