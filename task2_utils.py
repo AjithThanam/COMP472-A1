@@ -2,6 +2,7 @@ def main():
     seperateLabelsAndDocs("dataset/all_sentiment_shuffled_filtered.txt")
     convertLabels("dataset/all_labels.txt")
 
+#Makes separate 2 seperate files for labels and docs
 def seperateLabelsAndDocs(filepath):
     all_labels = open("dataset/all_labels.txt","w+")
     all_docs = open("dataset/all_docs.txt","w+")
@@ -12,10 +13,10 @@ def seperateLabelsAndDocs(filepath):
             all_labels.write(line[0] + "\n")
             all_docs.write(line[1])
 
-
     all_labels.close()
     all_docs.close()
 
+#Converts labels into 0 (neg) and 1 (pos)
 def convertLabels(filepath):
     converted_labels = open("dataset/converted_labels.txt","w+")
     line_count = 0

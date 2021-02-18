@@ -1,7 +1,7 @@
 from task2 import nb_classifier
 from task2 import base_dt
 from task2 import best_dt
-from task2 import get_y_test
+from task2 import get_train_test
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import precision_score
 from sklearn.metrics import recall_score
@@ -9,9 +9,10 @@ from sklearn.metrics import f1_score
 from sklearn.metrics import confusion_matrix
 
 def main():
-    create_report(get_y_test(),nb_classifier(),"naive_bayes")
-    create_report(get_y_test(),base_dt(),"base_dt")
-    create_report(get_y_test(),best_dt(),"best_dt")
+    X_train, X_test, y_train, y_test = get_train_test()
+    create_report(y_test,nb_classifier(X_train, X_test, y_train, y_test),"naive_bayes")
+    create_report(y_test,base_dt(X_train, X_test, y_train, y_test),"base_dt")
+    create_report(y_test,best_dt(X_train, X_test, y_train, y_test),"best_dt")
     
 def create_report(y_test,y_pred, filename):
     new_file = open("dataset/task3_reports/"+filename+".txt","w+")
