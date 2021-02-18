@@ -25,7 +25,7 @@ def base_dt(X_train, X_test, y_train, y_test):
     return y_pred
 
 def best_dt(X_train, X_test, y_train, y_test):
-    clf = tree.DecisionTreeClassifier()
+    clf = tree.DecisionTreeClassifier(splitter="random", max_depth=75)
     y_pred = clf.fit(X_train, y_train).predict(X_test)
     #Commented out for the time being as we technically dont need this print for this task
     #print("Number of mislabeled points for Best DT (total %d) : %d" % (X_test.shape[0], (y_test != y_pred).sum()))
@@ -37,7 +37,7 @@ def get_train_test():
     converted_array = converted_labels.read().split("\n")
     vectorizer = CountVectorizer()
     X = vectorizer.fit_transform(all_docs)
-    X_train, X_test, y_train, y_test = train_test_split(X, converted_array, test_size=0.2, random_state=0)
+    X_train, X_test, y_train, y_test = train_test_split(X, converted_array, test_size=0.2, random_state=0, shuffle=False)
     return X_train, X_test, y_train, y_test
 
 if __name__ == '__main__':

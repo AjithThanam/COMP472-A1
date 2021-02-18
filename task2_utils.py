@@ -25,7 +25,6 @@ def convertLabels(filepath):
     #Get number of lines the file contains
     with open(filepath) as f:
         file_lines = len(f.readlines())
-        print(file_lines)
 
     #Will create a new file with '1' and '0' instead of 'pos' and 'neg'.
     #The last line won't print a newline '\n'
