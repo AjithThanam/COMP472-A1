@@ -28,4 +28,4 @@
 - Three(3) files ('naive_bayes.txt', 'base_dt.txt', 'best_dt.txt') should be generated in '..\dataset\task3_reports' folder
 
 ***Task 4***
-- Open the word document 'COMP472_A1_task4' found in the '..\dataset\task3_reports' folder.
+- Open the word document or PDF named 'COMP472_A1_task4' found in the '..\dataset\task3_reports' folder.
